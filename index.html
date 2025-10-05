@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Giai Điệu Vui - Trang Âm Nhạc</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="badge">♪</div>
+      <div>
+        <h1>Giai Điệu Vui</h1>
+        <div class="subtitle">Trang âm nhạc đơn giản — nghe & đọc lời</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="grid">
+      <section class="card">
+        <h2>Playlist nổi bật</h2>
+        <div id="playlist">
+          <div class="playlist-item" data-src="audio/sample1.mp3" data-title="Giai điệu bình minh" data-artist="Nhạc sĩ 1">
+            <div class="cover">🎵</div>
+            <div class="meta">
+              <h3>Giai điệu bình minh</h3>
+              <p>Nhạc sĩ 1 • 2:34</p>
+            </div>
+            <div class="eq"><span></span><span></span><span></span></div>
+          </div>
+          <div class="playlist-item" data-src="audio/sample2.mp3" data-title="Ngẫu hứng phố" data-artist="Ban Nhạc A">
+            <div class="cover">🎧</div>
+            <div class="meta">
+              <h3>Ngẫu hứng phố</h3>
+              <p>Ban Nhạc A • 3:05</p>
+            </div>
+            <div class="eq"><span></span><span></span><span></span></div>
+          </div>
+          <div class="playlist-item" data-src="audio/sample3.mp3" data-title="Những bước chân" data-artist="Ca sĩ B">
+            <div class="cover">🎹</div>
+            <div class="meta">
+              <h3>Những bước chân</h3>
+              <p>Ca sĩ B • 4:12</p>
+            </div>
+            <div class="eq"><span></span><span></span><span></span></div>
+          </div>
+        </div>
+
+        <div class="card player">
+          <div class="player-info">
+            <div class="cover-now">♪</div>
+            <div class="info">
+              <div id="nowTitle">Chọn bài hát để bắt đầu</div>
+              <div id="nowArtist" class="muted"></div>
+            </div>
+            <div class="eq" id="nowEq"><span></span><span></span><span></span></div>
+          </div>
+          <div class="player-controls">
+            <button id="prev" class="btn">⏮</button>
+            <button id="play" class="btn">▶️</button>
+            <button id="next" class="btn">⏭</button>
+            <div class="progress" id="progress"><i></i></div>
+            <div id="time" class="time">0:00</div>
+          </div>
+          <audio id="audio" preload="metadata"></audio>
+        </div>
+
+        <p class="note">Thay <code>data-src</code> bằng đường dẫn mp3 thật.</p>
+      </section>
+
+      <aside class="card right">
+        <div class="search">
+          <input type="text" id="search" placeholder="Tìm bài: tên bài hoặc nghệ sĩ">
+          <button id="searchBtn" class="btn">Tìm</button>
+        </div>
+
+        <div class="lyrics-box">
+          <h3>Lời bài hát</h3>
+          <div id="lyrics">Chọn 1 bài để xem lời.</div>
+        </div>
+
+        <div class="settings">
+          <h3>Cài đặt</h3>
+          <label><input type="checkbox" id="autoplay"> Phát tự động</label>
+          <label><input type="checkbox" id="loop"> Lặp lại</label>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Giai Điệu Vui
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
